@@ -1,0 +1,26 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Utilisez la police de votre choix */
+    line-height: 1.6;
+}
+
+.h1-banner {
+  display: flex;
+  align-items: center;  /* Centre le contenu verticalement */
+  justify-content: center; /* Centre le contenu horizontalement */
+  height: 100px;
+  width: 100%;
+  background: grey;
+}
+.h1-banner h1{
+  font-size: 38px;
+  color: white;
+}
