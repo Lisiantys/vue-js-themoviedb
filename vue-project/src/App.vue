@@ -1,25 +1,18 @@
 <script setup>
-import TopRatedMovies from './views/TopRatedMovies.vue'
+import { RouterLink, RouterView } from 'vue-router'
 import Header from './templates/Header.vue'
 import Footer from './templates/Footer.vue'
-
-
-// import HomeView from './views/HomeView.vue'
 
 </script>
 
 <template>
-  <header>
-      <nav>
-        <Header />
-        
-      </nav>
-  </header>
-
+  <Header />
+    <main>
+      <RouterView />
+    </main>
   <Footer />
 </template>
 
-<style scoped>
-
+<style scope>
 
 </style>

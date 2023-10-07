@@ -1,5 +1,5 @@
 <template>
-    <div id="navbar">
+    <header id="navbar">
         <div class="menu-toggle" @click="toggleMenu">
             ☰
         </div>
@@ -10,12 +10,10 @@
             <RouterLink to="/last-movies">Last Movies</RouterLink>
             <RouterLink to="/search-movies">Search Movies</RouterLink>
         </div>
-    </div>
-    <RouterView />
+    </header>
 </template>
 
 <script>
-import { RouterLink, RouterView } from 'vue-router'
 
 export default {
     data() {
