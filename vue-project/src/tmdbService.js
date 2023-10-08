@@ -12,6 +12,9 @@ const tmdbService = {
   getPopularMovies() {
     return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`);
   },
+  getMovieDetails(movieId){
+    return tmdbAPI.get(`/movie/${movieId}`)
+  }
   // Ajoutez d'autres méthodes au besoin
 };
 

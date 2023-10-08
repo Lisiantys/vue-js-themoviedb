@@ -30,7 +30,7 @@ const router = createRouter({
       component: LastMovies
     },
     {
-      path: '/movie-details',
+      path: '/movie/:id',
       name: 'movie',
       component: MovieDetails
     },
