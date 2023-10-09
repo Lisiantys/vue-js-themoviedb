@@ -12,9 +12,20 @@ const tmdbService = {
   getPopularMovies() {
     return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`);
   },
-  getMovieDetails(movieId){
-    return tmdbAPI.get(`/movie/${movieId}`)
-  }
+  getFrenchMovies(){
+    return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=fr&page=1&sort_by=popularity.desc&with_original_language=fr`);
+  },
+  getMovieVideos(movieId) {
+    return tmdbAPI.get(`/movie/${movieId}/videos`);
+  },
+  getMovieDetails(movieId) {
+    return tmdbAPI.get(`/movie/${movieId}`).catch(error => {
+        console.error("Erreur lors de l'appel à l'API TMDB:", error.response ? error.response.data : error.message);
+        throw error;
+    });
+}
+
+
   // Ajoutez d'autres méthodes au besoin
 };
 
