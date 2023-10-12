@@ -13,13 +13,7 @@ const tmdbService = {
     return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`);
   },
   getFrenchMovies(){
-    return tmdbAPI.get(`/movie/now_playing?with_original_language=fr&include_adult=false&language=fr&page=1`);
-  },
-  getAmericanMovies(){
-    return tmdbAPI.get(`movie/now_playing?with_original_language=fr&include_adult=false&language=fr&page=1`);
-  },
-  getCurrentDisplayedMovies(){
-    return tmdbAPI.get('/movie/now_playing?language=en-US&page=1');
+    return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=fr&page=1&sort_by=popularity.desc&with_original_language=fr`);
   },
   getMovieVideos(movieId) {
     return tmdbAPI.get(`/movie/${movieId}/videos`);

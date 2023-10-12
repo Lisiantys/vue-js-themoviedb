@@ -7,9 +7,8 @@ export const useMoviesStore = defineStore({
     //Film populaires
     popularMovies: null,
     frenchMovies: null,
-    americanMovies: null,
+    //Détails films
     movieDetails: null,
-    currentMovies: null
   }),
   actions: {
     setPopularMovies(movies) { //s'occupe d'ajouter LES films au store
@@ -18,14 +17,8 @@ export const useMoviesStore = defineStore({
     setFrenchMovies(movies) { //s'occupe d'ajouter LES films au store
       this.frenchMovies = movies;
     },
-    setAmericanMovies(movies){
-      this.americanMovies = movies;
-    },
     setMovieDetails(movie) { //s'occupe d'ajouter le film au store
       this.movieDetails = movie;
-    },
-    setCurrentDisplayedMovies(movies){
-      this.currentMovies = movies;
     },
     async fetchMovieDetails(movieId) { //fait un demande à l'api et retourne la reponse a la méthode
       const movieResponse = await tmdbService.getMovieDetails(movieId);

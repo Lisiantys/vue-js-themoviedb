@@ -9,7 +9,6 @@
             <h3 class="movie-title">{{ movie.title }}</h3>
             <img :src="'https://image.tmdb.org/t/p/w200' + movie.poster_path" :alt="movie.title">
             <p class="movie-release"><strong>Sortie :</strong> {{ movie.release_date }}</p>
-            <p><strong>Popularité :</strong>{{ movie.popularity }}</p>
             <p class="movie-overview"><strong>Résumé :</strong> {{ movie.overview.substring(0, 70) + (movie.overview.length > 70 ? '...' : '') }}</p>
           </RouterLink>
         </li>
@@ -18,9 +17,8 @@
 </template>
   
 <script>
-//import nommé = importation explicite nommé d'un module car il pourrait y avoir plusieurs store donc plusieurs fonctionnalitées
-import { useMoviesStore } from '../stores/movie' 
-import tmdbService from '../tmdbService.js'; // import par défaut, car on a qu'une seule fonctionnalitée à importer
+import { useMoviesStore } from '../stores/movie'
+import tmdbService from '../tmdbService.js';
 import { RouterLink, RouterView } from 'vue-router'
 export default {
   data() {
