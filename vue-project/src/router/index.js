@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AmericanMovies from '../views/AmericanMovies.vue'
 import FrenchMovies from '../views/FrenchMovies.vue'
-import LastMovies from '../views/LastMovies.vue'
+import UpcomingMovies from '../views/UpcomingMovies.vue'
 import MovieDetails from '../views/MovieDetails.vue'
 import SearchMovies from '../views/SearchMovies.vue'
 import TopRatedMovies from '../views/TopRatedMovies.vue'
@@ -25,9 +25,9 @@ const router = createRouter({
       component: FrenchMovies
     },
     {
-      path: '/last-movies',
-      name: 'last',
-      component: LastMovies
+      path: '/upcoming-movies',
+      name: 'upcoming',
+      component: UpcomingMovies
     },
     {
       path: '/movie/:id',

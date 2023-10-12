@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="h1-banner">
-      <h1>American Movies</h1>
+      <h1>Upcoming Movies</h1>
     </div>
     <ul class="movie-list">
       <li class="movie-container" v-for="movie in movies" :key="movie.id">
@@ -30,19 +30,19 @@ export default{
   },
   async mounted(){
     const moviesStore = useMoviesStore();
-    if(moviesStore.americanMovies){
-      this.movies = moviesStore.americanMovies;
+    if(moviesStore.upcomingMovies){
+      this.movies = moviesStore.upcomingMovies;
       console.log("récupération données store");
     } else{
       try{
-        const response = await tmdbService.getAmericanMovies();
+        const response = await tmdbService.getUpcomingMovies();
         this.movies = response.data.results;
         console.log("appel api");
 
-        moviesStore.setAmericanMovies(this.movies);
+        moviesStore.setUpcomingMovies(this.movies);
         console.log("ajout données dans le store");
       } catch (error) {
-        console.log("Impossible de récuperer les films américains", error);
+        console.log("Impossible de récuperer les films prochainements", error);
       }
     }
   }

@@ -7,6 +7,8 @@ export const useMoviesStore = defineStore({
     //Film populaires
     popularMovies: null,
     frenchMovies: null,
+    americanMovies: null,
+    upcomingMovies: null,
     //Détails films
     movieDetails: null,
   }),
@@ -16,6 +18,12 @@ export const useMoviesStore = defineStore({
     },
     setFrenchMovies(movies) { //s'occupe d'ajouter LES films au store
       this.frenchMovies = movies;
+    },
+    setAmericanMovies(movies) { //s'occupe d'ajouter LES films au store
+      this.AmericanMovies = movies;
+    },
+    setUpcomingMovies(movies) { //s'occupe d'ajouter LES films au store
+      this.lastMovies = movies;
     },
     setMovieDetails(movie) { //s'occupe d'ajouter le film au store
       this.movieDetails = movie;

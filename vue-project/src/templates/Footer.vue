@@ -7,7 +7,7 @@
                 <RouterLink to="/french-movies">French Movies</RouterLink>
             </div>
             <div class="footer-section">
-                <RouterLink to="/last-movies">Last Movies</RouterLink>
+                <RouterLink to="/upcoming-movies">Upcoming Movies</RouterLink>
                 <RouterLink to="/search-movies">Search Movies</RouterLink>
                 <RouterLink to="/top-rated-movies">Top Rated Movies</RouterLink>
             </div>

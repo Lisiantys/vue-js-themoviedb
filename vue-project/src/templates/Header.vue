@@ -7,7 +7,7 @@
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/american-movies">American Movies</RouterLink>
             <RouterLink to="/french-movies">French Movies</RouterLink>
-            <RouterLink to="/last-movies">Last Movies</RouterLink>
+            <RouterLink to="/upcoming-movies">Upcoming Movies</RouterLink>
             <RouterLink to="/search-movies">Search Movies</RouterLink>
         </div>
     </header>

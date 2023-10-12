@@ -3,6 +3,7 @@
     <div class="main-container" v-if="movie">
       <img :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" :alt="movie.title">
       <div class="movie-details-container">
+        <button @click="previousPage()">Retour à la page précédente</button>
         <iframe v-if="movie.videos && movie.videos.length" 
           width="560" 
           height="315" 
@@ -36,6 +37,11 @@ export default{
     return{
       movie: null
     };
+  },
+  methods: {
+    previousPage(){
+      this.$router.go(-1);  // Retourne à la page précédente
+    }
   },
   async mounted(){
     const movieId = this.$route.params.id; //on récupère l'id du film au travers de la route

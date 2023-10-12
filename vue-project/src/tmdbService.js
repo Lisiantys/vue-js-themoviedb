@@ -10,10 +10,16 @@ const tmdbAPI = axios.create({
 
 const tmdbService = {
   getPopularMovies() {
-    return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`);
+    return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=fr-US&page=1&sort_by=popularity.desc`);
   },
   getFrenchMovies(){
-    return tmdbAPI.get(`discover/movie?include_adult=false&include_video=false&language=fr&page=1&sort_by=popularity.desc&with_original_language=fr`);
+    return tmdbAPI.get(`/movie/now_playing?language=fr-FR&page=1&region=FR`);
+  },
+  getAmericanMovies(){
+    return tmdbAPI.get(`/movie/now_playing?language=en-US&page=1&region=US`);
+  },
+  getUpcomingMovies(){
+    return tmdbAPI.get(`movie/upcoming?language=en-US&page=1`);
   },
   getMovieVideos(movieId) {
     return tmdbAPI.get(`/movie/${movieId}/videos`);
