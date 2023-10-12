@@ -77,7 +77,7 @@ export default{
 .movie-overview{
   text-align: initial;
 }
-/* Pour les écrans de taille moyenne (par exemple, tablettes) */
+
 @media (max-width: 1240px) {
   .movie-list {
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les tablettes */
@@ -85,7 +85,6 @@ export default{
   }
 }
 
-/* Pour les petits écrans (par exemple, mobiles) */
 @media (max-width: 768px) {
   .movie-list {
     width: 80%;
@@ -93,8 +92,7 @@ export default{
   }
 }
 
-/* Pour les petits écrans (par exemple, mobiles) */
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .movie-list {
     width: 80%;
     grid-template-columns: repeat(1, 1fr); /* 2 colonnes pour les mobiles */

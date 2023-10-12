@@ -29,9 +29,10 @@ const tmdbService = {
         console.error("Erreur lors de l'appel à l'API TMDB:", error.response ? error.response.data : error.message);
         throw error;
     });
-}
-
-
+  },
+  getSearchMovies(query){
+    return tmdbAPI.get(`search/movie?query=${query}&include_adult=false&language=en-US&page=1`);
+  }
   // Ajoutez d'autres méthodes au besoin
 };
 
