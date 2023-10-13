@@ -20,10 +20,10 @@ export const useMoviesStore = defineStore({
       this.frenchMovies = movies;
     },
     setAmericanMovies(movies) { //s'occupe d'ajouter LES films au store
-      this.AmericanMovies = movies;
+      this.americanMovies = movies;
     },
-    setUpcomingMovies(movies) { //s'occupe d'ajouter LES films au store
-      this.lastMovies = movies;
+    setUpcomingMovies(movies) { 
+      this.upcomingMovies = movies;
     },
     setMovieDetails(movie) { //s'occupe d'ajouter le film au store
       this.movieDetails = movie;
